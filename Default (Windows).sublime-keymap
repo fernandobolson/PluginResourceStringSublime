@@ -1,0 +1,26 @@
+
+[
+
+ {"keys": ["f8"], "command": "extrairesourcestring",
+    "args": {
+      "commands":
+      [
+        { "command": "cut" },
+        { "command": "insert", "args": {"characters": "extractedvar"} },
+        { "command": "move_to", "args": {"to": "eol", "extend": false} },
+        { "command": "move_to", "args": {"to": "bol", "extend": false} },
+        { "command": "insert", "args": {"characters": "\n"} },
+        { "command": "move", "args": {"by": "lines", "forward": false} },
+        { "command": "insert", "args": {"characters": "extractedvar = "} },
+        { "command": "paste" },
+        { "command": "insert", "args": {"characters": ";"} },
+        { "command": "move_to", "args": {"to": "bol", "extend": false} },
+        { "command": "move", "args": {"by": "word_ends", "forward": true} },
+        { "command": "move", "args": {"by": "words_begins", "forward": true} },
+        { "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+        { "command": "find_under_expand", "context": "window" },
+      ],
+    }
+  },
+
+]
